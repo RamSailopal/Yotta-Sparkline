@@ -10,6 +10,7 @@ Install Docker and docker-compose and then:
 
       git clone https://github.com/RamSailopal/Yotta-Sparkline
       cd Yotta-Sparkline/Docker
+      export apiadd='http://dockerserveraddress:9090'
       docker-compose up
       
 # Viewing the chart
@@ -44,6 +45,14 @@ Install Docker and docker-compose and then:
       ^VITALS(8)=39
       ^VITALS(9)=21
       ^VITALS(10)=28
+      
+ This is then exposed as an array using Lua and Pegasus - https://evandrolg.github.io/pegasus.lua/
+ 
+      [22,11,54,7,12,6,37,39,21,28] 
+      
+ The data can be view by navigating to http://dockerserveraddress:9090
+ 
+ 
 
 
       
