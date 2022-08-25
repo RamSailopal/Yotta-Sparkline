@@ -6,7 +6,7 @@ apt-get install -y nodejs git
 cd /home
 git clone https://github.com/borisyankov/react-sparklines
 cd react-sparklines
-sed -i 's/webpack-dev-server --progress/webpack-dev-server --progress  --host 0.0.0.0/' package.json
+sed -i 's/webpack-dev-server --progress/webpack-dev-server --disableHostCheck --progress  --host 0.0.0.0/' package.json
 cp /home/sparkline1/src/index.html demo/index.html
 cp /home/sparkline1/src/demo.js demo/demo.js
 sed -i "s@process.env.REACT_APP_APIADD@'$REACT_APP_APIADD'@" demo/demo.js
