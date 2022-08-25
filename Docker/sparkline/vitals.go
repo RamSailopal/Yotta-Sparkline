@@ -1,0 +1,24 @@
+%GO Global Output Utility
+GT.M 24-AUG-2022 12:52:15
+^VITALS(1)
+22
+^VITALS(2)
+11
+^VITALS(3)
+54
+^VITALS(4)
+7
+^VITALS(5)
+12
+^VITALS(6)
+6
+^VITALS(7)
+37
+^VITALS(8)
+39
+^VITALS(9)
+21
+^VITALS(10)
+28
+
+

@@ -1,0 +1,36 @@
+#
+#       AUTHOR - Raman Sailopal
+#
+version: "2"
+services:
+ node:
+   image: docker.io/ubuntu
+   hostname: node
+   container_name: node
+   ports:
+      - 8080:8080
+   volumes:
+     - "$PWD/sparkline:/home/sparkline1"
+     - "$PWD/reactenter:/home/reactapp"
+   entrypoint: [ "/bin/bash", "-c", "/home/reactapp/entrypoint.sh" ]
+   environment:
+     - REACT_APP_APIADD=$apiadd
+   networks:
+     - yottanet
+
+ lua:
+   image: docker.io/yottadb/yottadb-base
+   hostname: lua
+   container_name: lua
+   ports:
+      - 9090:9090
+   volumes:
+     - "$PWD/sparkline:/home/sparkline1"
+     - "$PWD/lua:/home/lua"
+   entrypoint: [ "/bin/bash", "-c", "/home/lua/entrypoint.sh" ]
+   networks:
+     - yottanet
+
+
+networks:
+    yottanet:
