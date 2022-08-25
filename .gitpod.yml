@@ -2,7 +2,7 @@ tasks:
   - init: |
       echo 'TODO: build project'
     command: |
-      export apiadd="https://9090-${GITPOD_WORKSPACE_URL##https://}" && docker-compose up
+      export apiadd="https://9090-${GITPOD_WORKSPACE_URL##https://}" && cd Docker && docker-compose up
 ports:
   - port: 9090
     visibility: public
