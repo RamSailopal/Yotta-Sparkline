@@ -39,9 +39,17 @@ Install Docker and docker-compose and then:
  
  The data for the sparkline chart is stored in the global VITALS i.e:
  
-      ^VITALS("temp","26082022135910")=36.8
+      
       ^VITALS("pulse","26082022135910")=92
-      ^VITALS("resp","26082022135910")=19
+      ^VITALS("pulse","26082022135915")=81
+      ^VITALS("pulse","26082022135920")=118
+      ^VITALS("resp","26082022135910")=20
+      ^VITALS("resp","26082022135915")=19
+      ^VITALS("resp","26082022135920")=16
+      ^VITALS("temp","26082022135910")=36.8
+      ^VITALS("temp","26082022135915")=37.2
+      ^VITALS("temp","26082022135920")=36.8
+      
  
  The first subscript represents the category of reading and the second a date/time stamp in the format (daymonthyearhourminutesseconds)
       
