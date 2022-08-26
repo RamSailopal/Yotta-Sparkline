@@ -1,6 +1,6 @@
 # Yotta-Sparkline
 
-A demo of react-sparkline extracting data from YottaDB
+A demo of react-sparkline extracting data from YottaDB with a vital signs dashboard as the use case
 
 ![Alt text](vitals.JPG?raw=true "view")
 
