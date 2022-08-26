@@ -11,15 +11,20 @@ axios.get('process.env.REACT_APP_APIADD/temp').then(function(json_data) {
 		            sampleData.push(json_data.data[key]);
 		        });
 	    var lastval=sampleData[sampleData.length - 1];
+	    if (lastval >= 37.5 || lastval <= 36.5)  {
+	    	var valcol="red"
+	    }
+	   else {
+		var valcol="black"
+           }
     ReactDOM.render(<Sparklines data={sampleData}>
-	            <SparklinesText text="test" style={ {color: "yellow" }}/>
 	            <SparklinesLine />
 	            <SparklinesSpots />
 	            <SparklinesReferenceLine type="mean" />
 	        </Sparklines>
 	            
 	    , document.getElementById('temp'));
-    ReactDOM.render(<h1>{lastval}</h1>
+    ReactDOM.render(<h1><font color={valcol}>{lastval}</font></h1>
 
 	                            , document.getElementById('templast'));
 
@@ -33,6 +38,12 @@ axios.get('process.env.REACT_APP_APIADD/pulse').then(function(json_data) {
 			                                sampleData.push(json_data.data[key]);
 			                            });
 	    var lastval=sampleData[sampleData.length - 1];
+	    if (lastval >= 120 || lastval <= 80)  {
+                     var valcol="red"
+            }
+            else {
+                     var valcol="black"
+            }
 	    ReactDOM.render(<Sparklines data={sampleData}>
 		                        <SparklinesLine style={{ fill: "none" }}/>
 		                         <SparklinesReferenceLine type="mean" />
@@ -40,7 +51,7 @@ axios.get('process.env.REACT_APP_APIADD/pulse').then(function(json_data) {
 		                    </Sparklines>
 
 		                , document.getElementById('pulse'));
-             ReactDOM.render(<h1>{lastval}</h1>
+             ReactDOM.render(<h1><font color={valcol}>{lastval}</font></h1>
                                 , document.getElementById('pulselast'));
 
 });
@@ -52,6 +63,13 @@ axios.get('process.env.REACT_APP_APIADD/resp').then(function(json_data) {
 				                                                            sampleData.push(json_data.data[key]);
 				                                                        });
 	            var lastval=sampleData[sampleData.length - 1];
+	            if (lastval >= 20 || lastval <= 16)  {
+	                   var valcol="red"
+					            }
+	            else {
+	                   var valcol="black"
+	            }
+
 	            ReactDOM.render(<Sparklines data={sampleData}>
 			                                            <SparklinesLine />
 			                                            <SparklinesSpots />
@@ -59,7 +77,7 @@ axios.get('process.env.REACT_APP_APIADD/resp').then(function(json_data) {
 			                                        </Sparklines>
 
 			                                    , document.getElementById('resp'));
-                     ReactDOM.render(<h1>{lastval}</h1>
+                     ReactDOM.render(<h1><font color={valcol}>{lastval}</font></h1>
 
 	                                        , document.getElementById('resplast'));
 
