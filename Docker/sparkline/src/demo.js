@@ -4,7 +4,7 @@ import { Sparklines, SparklinesBars, SparklinesLine, SparklinesCurve,  Sparkline
 import axios from 'axios';
 
 
-axios.get('http://192.168.240.21:9090/temp').then(function(json_data) {
+axios.get('process.env.REACT_APP_APIADD/temp').then(function(json_data) {
     var sampleData = [];
 	    var keys = Object.keys(json_data.data);
 	    keys.forEach(function(key){
@@ -26,7 +26,7 @@ axios.get('http://192.168.240.21:9090/temp').then(function(json_data) {
 
 });
 
-axios.get('http://192.168.240.21:9090/pulse').then(function(json_data) {
+axios.get('process.env.REACT_APP_APIADD/pulse').then(function(json_data) {
 	    var sampleData = [];
 	            var keys = Object.keys(json_data.data);
 	            keys.forEach(function(key){
@@ -45,7 +45,7 @@ axios.get('http://192.168.240.21:9090/pulse').then(function(json_data) {
 
 });
 
-axios.get('http://192.168.240.21:9090/resp').then(function(json_data) {
+axios.get('process.env.REACT_APP_APIADD/resp').then(function(json_data) {
 	            var sampleData = [];
 	                    var keys = Object.keys(json_data.data);
 	                    keys.forEach(function(key){
