@@ -55,7 +55,7 @@ Install Docker and docker-compose and then:
       
  This is then exposed as an array for each reading using Lua and Pegasus - https://evandrolg.github.io/pegasus.lua/
  
- The ^VITALS global is populated with random figures within excepted ranges for each reading using a Python script that adds new readings every 5 seconds.
+ The ^VITALS global is populated with random figures within excepted ranges for each reading, using a Python script that adds new readings every 5 seconds. This is  achieved through the **gen.py** script in the **Docker/sparkline** directory
  
  The data can be view by navigating to: 
  
