@@ -63,7 +63,7 @@ Install Docker and docker-compose and then:
  
  http://dockerserveraddress:9090/pulse for heart rate readings
  
- http://dockerserveraddress:9090/resp for temperature respiratory readings
+ http://dockerserveraddress:9090/resp for respiratory readings
  
  
      
