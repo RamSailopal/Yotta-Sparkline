@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta http-equiv="refresh" content="10">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet">
 
     <style>
@@ -40,7 +41,7 @@
             color: white; background: #336aff;
         }
         .content {
-            max-width: 1000px; margin: 0 auto; padding: 1rem .5rem;
+            max-width: 500px; margin: 0 auto; padding: 1rem .5rem; max-height: 2500px;
         }
         header .content {
             display: flex; justify-content: space-between; flex-wrap: wrap;
@@ -85,13 +86,39 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="content">
+                <h1>Vital Statistics</h1>
+	</div>							        
+    </header>
+    <div id="current_date" class="c3"></p>
+	<script>
+		document.getElementById("current_date").innerHTML = "Last updated - " + Date();
+	</script>
+    </div>
     <div class="content">
 
-        <h2>Vital Statistics</h2>
+        <h2>Temperature</h2>
 
         <div class="row">
-            <div id="simple"></div>
+            <div id="temp"></div>
         </div>
+	
+	<div id="templast"></div>
+
+	<h2>Pulse</h2>
+
+	<div class="row">
+            <div id="pulse"></div>
+	</div>
+	<div id="pulselast"></div>
+
+        <h2>Respiratory Rate</h2>
+
+	<div class="row">
+	     <div id="resp"></div>
+	</div>
+        <div id="resplast"></div>
 
     </div>
 
