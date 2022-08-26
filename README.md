@@ -37,29 +37,36 @@ Install Docker and docker-compose and then:
  
  # YottaDB data
  
- The data for the sparkline chart is stored in the global VITALS:
+ The data for the sparkline chart is stored in the global VITALS i.e:
  
-      ^VITALS(1)=22
-      ^VITALS(2)=11
-      ^VITALS(3)=54
-      ^VITALS(4)=7
-      ^VITALS(5)=12
-      ^VITALS(6)=6
-      ^VITALS(7)=37
-      ^VITALS(8)=39
-      ^VITALS(9)=21
-      ^VITALS(10)=28
       
- This is then exposed as an array using Lua and Pegasus - https://evandrolg.github.io/pegasus.lua/
- 
-      [22,11,54,7,12,6,37,39,21,28] 
+      ^VITALS("pulse","26082022135910")=92
+      ^VITALS("pulse","26082022135915")=81
+      ^VITALS("pulse","26082022135920")=118
+      ^VITALS("resp","26082022135910")=20
+      ^VITALS("resp","26082022135915")=19
+      ^VITALS("resp","26082022135920")=16
+      ^VITALS("temp","26082022135910")=36.8
+      ^VITALS("temp","26082022135915")=37.2
+      ^VITALS("temp","26082022135920")=36.8
       
- The data can be view by navigating to http://dockerserveraddress:9090
  
- 
-
-
+ The first subscript represents the category of reading and the second a date/time stamp in the format (daymonthyearhourminutesseconds)
       
+ This is then exposed as an array for each reading using Lua and Pegasus - https://evandrolg.github.io/pegasus.lua/
+ 
+ The ^VITALS global is populated with random figures within excepted ranges for each reading using a Python script that adds new readings every 5 seconds.
+ 
+ The data can be view by navigating to: 
+ 
+ http://dockerserveraddress:9090/temp for temperature readings
+ 
+ http://dockerserveraddress:9090/pulse for heart rate readings
+ 
+ http://dockerserveraddress:9090/resp for temperature respiratory readings
+ 
+ 
+     
 
 #  References
 
